@@ -67,5 +67,19 @@ public class ArrayOps {
         return true;
     }
 
+    public static boolean isColMagic(int[][] arr) {
+        if (arr.length == 0) return true;
+        int total = sumCols(arr)[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (sumCols(arr)[i] != total) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    public static boolean isLocationMagic(int[][] arr, int row, int col) {
+        if (arr.length == 0) return true;
+        return (sum(arr[row]) == sumCols(arr)[col]);
+    }
 }
