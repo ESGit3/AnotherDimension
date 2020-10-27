@@ -43,4 +43,29 @@ public class ArrayOps {
         return total;
     }
 
+    public static int[] sumCols(int[][] arr) {
+        if (arr.length == 0) return new int[0];
+        int[] list = new int[arr[0].length];
+        for (int i = 0; i < arr[0].length; i++) {
+            int total = 0;
+            for (int j = 0; j < arr.length; j++) {
+                total += arr[j][i];
+            }
+            list[i] = total;
+        }
+        return list;
+    }
+
+    public static boolean isRowMagic(int[][] arr) {
+        if (arr.length == 0) return true;
+        int total = sum(arr[0]);
+        for (int i = 0; i < arr.length; i++) {
+            if (sum(arr[i]) != total) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }

@@ -33,5 +33,19 @@ public class Tester {
         System.out.println(Arrays.toString(ArrayOps.largestInRows(A)));
         System.out.println(ArrayOps.sum(B));
         System.out.println(ArrayOps.sum(A));
+
+        int[][] C = { {  1,  2, 3, 4 },
+            {  2, 3,  4,  1 },
+            { 3, 4,  1, 2 } };  //this is rowMagic but NOT colMagic
+
+        int[][] D = { {  1,  1, 1 },
+            {  2, 2, 2 },
+            { 3,  3, 3 } };  //this is colMagic but NOT rowMagic
+
+        int[][] E = { {  2,  2, 2 },
+            {  2, 2, 2 } };  //this is both colMagic AND rowMagic
+
+        System.out.println(Arrays.toString(ArrayOps.sumCols(A)));
+        System.out.println(ArrayOps.isRowMagic(C));
     }
 }
