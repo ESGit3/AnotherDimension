@@ -18,6 +18,7 @@ public class Tester {
 
         int[][] doubleArr = {{1, 4, 6}, {1, 2, 0, 5, 7}, {5, 6, 1, 3}};
         System.out.println(arrToString(ArrayOps.sumRows(doubleArr)));
+        System.out.println(arrToString(ArrayOps.largestInRows(doubleArr)));
 
 
     }
