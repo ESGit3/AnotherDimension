@@ -45,8 +45,13 @@ public class Tester {
         int[][] E = { {  2,  2, 2 },
             {  2, 2, 2 } };  //this is both colMagic AND rowMagic
 
+        int[][] F = {
+                {  2,  4, 2 },
+                {  2, 2, 2 } };
+
         System.out.println(Arrays.toString(ArrayOps.sumCols(A)));
         System.out.println(ArrayOps.isRowMagic(C));
         System.out.println(ArrayOps.isColMagic(D));
+        System.out.println(ArrayOps.isLocationMagic(F, 1, 1));
     }
 }
